@@ -10,40 +10,41 @@ import org.hibernate.criterion.Order;
 import org.hibernate.criterion.Restrictions;
 
 public class FuncionarioDAO {
-    
+
     Session sessao;
-    
-    public List<Funcionario> buscaTableFuncionario(){
-        
+
+    public List<Funcionario> buscaTableFuncionario() {
+
         List<Funcionario> listaFunc = new ArrayList<>();
-        
+
         sessao = HibernateUtil.getSessionFactory().openSession();
-        
+
         sessao.beginTransaction();
-        
+
         Criteria crit = sessao.createCriteria(Funcionario.class);
-            
+
         crit.addOrder(Order.asc("nome"));
-        
+
         listaFunc = crit.list();
-        
+
         return listaFunc;
     }
-    public List<Funcionario> buscaFuncID(String idFunc){
-        
+
+    public List<Funcionario> buscaFuncID(String idFunc) {
+
         List<Funcionario> listaFunc = new ArrayList<>();
-        
+
         sessao = HibernateUtil.getSessionFactory().openSession();
-        
+
         sessao.beginTransaction();
-        
+
         Criteria crit = sessao.createCriteria(Funcionario.class);
-        
-        crit.add(Restrictions.like("IdFunc", idFunc+"%"));
-        
+
+        crit.add(Restrictions.like("IdFunc", idFunc + "%"));
+
         listaFunc = crit.list();
-        
+
         return listaFunc;
-        
+
     }
 }

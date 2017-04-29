@@ -5,10 +5,11 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 public class Funcionario {
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int idfunc;
-    
+    private int idFunc;
+
     private String nome;
     private int idade;
     private String telefone;
@@ -46,11 +47,11 @@ public class Funcionario {
         this.CPF = CPF;
     }
 
-    public int getIdfunc() {
-        return idfunc;
+    public int getIdFunc() {
+        return idFunc;
     }
 
-    public void setIdfunc(int idfunc) {
-        this.idfunc = idfunc;
+    public void setIdFunc(int idFunc) {
+        this.idFunc = idFunc;
     }
 }

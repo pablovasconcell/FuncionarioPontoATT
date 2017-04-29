@@ -3,9 +3,9 @@ package br.com.view;
 import br.com.model.TableModelFuncionario;
 
 public class PesquisaFuncionario extends javax.swing.JInternalFrame {
-    
-    public static TableModelFuncionario tableFunc;
-    
+
+    TableModelFuncionario tableFunc;
+
     public PesquisaFuncionario() {
         initComponents();
         this.tableFunc = new TableModelFuncionario();
@@ -24,6 +24,8 @@ public class PesquisaFuncionario extends javax.swing.JInternalFrame {
         jTableFunc = new javax.swing.JTable();
 
         setClosable(true);
+        setTitle("Pesquisar Funcionário");
+        setToolTipText("");
 
         jLabel7.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
         jLabel7.setText("Pesquisar Funcionário");
@@ -42,7 +44,7 @@ public class PesquisaFuncionario extends javax.swing.JInternalFrame {
 
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "Title 1", "Title 2", "Title 3", "Title 4", "Title 5"
             }
         ));
         jScrollPane1.setViewportView(jTableFunc);
@@ -52,17 +54,17 @@ public class PesquisaFuncionario extends javax.swing.JInternalFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jSeparator1, javax.swing.GroupLayout.Alignment.TRAILING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel7)
-                .addGap(156, 156, 156))
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 683, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
                 .addGap(26, 26, 26)
                 .addComponent(jLabel1)
                 .addGap(18, 18, 18)
-                .addComponent(pesqFunc, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(pesqFunc, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 683, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel7)
+                .addGap(239, 239, 239))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -76,7 +78,7 @@ public class PesquisaFuncionario extends javax.swing.JInternalFrame {
                     .addComponent(pesqFunc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 260, Short.MAX_VALUE))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 246, Short.MAX_VALUE))
         );
 
         pack();
@@ -84,15 +86,11 @@ public class PesquisaFuncionario extends javax.swing.JInternalFrame {
 
     private void pesqFuncKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_pesqFuncKeyReleased
         if (pesqFunc.getText().isEmpty()) {
-
             this.tableFunc = new TableModelFuncionario();
             this.jTableFunc.setModel(tableFunc);
-
         } else {
-
             this.tableFunc = new TableModelFuncionario(pesqFunc.getText());
             this.jTableFunc.setModel(tableFunc);
-
         }
     }//GEN-LAST:event_pesqFuncKeyReleased
 

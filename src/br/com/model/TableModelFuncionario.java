@@ -19,9 +19,9 @@ public class TableModelFuncionario extends AbstractTableModel {
 
     public void adicionaTabelaFuncionario() {
 
-        FuncionarioDAO func = new FuncionarioDAO();
+        FuncionarioDAO dao = new FuncionarioDAO();
 
-        for (Funcionario funci : func.buscaTableFuncionario()) {
+        for (Funcionario funci : dao.buscaTableFuncionario()) {
 
             listaTableFuncionario.add(funci);
         }
@@ -60,7 +60,7 @@ public class TableModelFuncionario extends AbstractTableModel {
         switch (columnIndex) {
 
             case 0:
-                return this.listaTableFuncionario.get(rowIndex).getIdfunc();
+                return this.listaTableFuncionario.get(rowIndex).getIdFunc();
             case 1:
                 return this.listaTableFuncionario.get(rowIndex).getNome();
             case 2:
@@ -73,6 +73,7 @@ public class TableModelFuncionario extends AbstractTableModel {
                 return this.listaTableFuncionario.get(rowIndex);
         }
     }
+
     @Override
     public String getColumnName(int indiceColumn) {
 
