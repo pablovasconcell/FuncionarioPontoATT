@@ -9,6 +9,10 @@ import org.hibernate.Session;
 import org.hibernate.criterion.Order;
 import org.hibernate.criterion.Restrictions;
 
+
+
+
+
 public class FuncionarioDAO {
 
     Session sessao;

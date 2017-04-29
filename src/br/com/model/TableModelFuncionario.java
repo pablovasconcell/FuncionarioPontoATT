@@ -7,6 +7,9 @@ import javax.swing.table.AbstractTableModel;
 
 public class TableModelFuncionario extends AbstractTableModel {
 
+    
+    
+    
     private final String[] NOME_COLUNA_FUNCIONARIO = {"IdFunc", "Nome", "Idade", "Telefone", "CPF"};
     private List<Funcionario> listaTableFuncionario;
 

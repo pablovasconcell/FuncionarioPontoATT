@@ -6,6 +6,10 @@ import javax.swing.JOptionPane;
 
 public class LGAdmin extends javax.swing.JFrame {
 
+    
+    
+    
+    
     public LGAdmin() {
         initComponents();
     }

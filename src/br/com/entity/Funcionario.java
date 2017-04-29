@@ -6,6 +6,9 @@ import javax.persistence.Id;
 
 public class Funcionario {
 
+    
+    
+    
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int idFunc;

@@ -4,6 +4,11 @@ import br.com.model.TableModelFuncionario;
 
 public class PesquisaFuncionario extends javax.swing.JInternalFrame {
 
+    
+    
+    
+    
+    
     TableModelFuncionario tableFunc;
 
     public PesquisaFuncionario() {
