@@ -105,7 +105,7 @@ public class LGAdmin extends javax.swing.JFrame {
     private void validaLogin() {
         Principal telaPrincipal = new Principal();
         LoginDAO dao = new LoginDAO();
-        LoginAdmin admin  = new LoginAdmin();
+        LoginAdmin admin = new LoginAdmin();
         admin = dao.verificaLogin(usuarioLogin.getText(), senhaLogin.getText());
         if (admin == null) {
             JOptionPane.showMessageDialog(null, "Usuario ou Senha inválidos.");
